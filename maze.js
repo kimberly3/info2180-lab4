@@ -14,6 +14,7 @@ function setEvents(){
 	}
 	
 	//<!-- EXERCISE 2 -->
+	var ex5= document.getElementById("status");
 	var red= null;
 	var ex2= document.querySelectorAll("div .boundary");
 	for (let a=0; a < ex2.length; a++){
@@ -26,7 +27,8 @@ function setEvents(){
 			var result= ex2[i];
 			result.classList.add('youlose');
 			red= true;
-		
+			//exercise 5
+			ex5.innerHTML="You LOSE! :("
 			}
 		
 		}
@@ -41,21 +43,36 @@ function setEvents(){
 			alert("You WIN!!!");
 		}
 	}
-
+	
 	//<!-- EXERCISE 4 -->
 
 	var ex4= document.getElementById("start");
 	ex4.onclick = function(){
-			
+			//ex5.innerHTML="Move your mouse over the "S" to begin.";
 			for(let c=0; c < ex2.length; c++){
 				var nresult= ex2[c];
 				
 					nresult.classList.remove('youlose');
 					red= false;
+
 				
 			}
+			ex5.innerHTML='Move your mouse over the "S" to begin.'
 		
 	};
+
+	//<!-- EXERCISE 5 -->
+
+	
+
+	ex3.onmouseover = function(){
+		if(red!= true){
+			ex5.innerHTML="You WIN!!!";
+		}
+	};
+
+
+
 }
 
 	
