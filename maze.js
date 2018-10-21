@@ -32,6 +32,7 @@ function setEvents(){
 		}
 
 	}
+
 	//<!-- EXERCISE 3 -->
 	
 	var ex3= document.getElementById("end");
@@ -40,11 +41,28 @@ function setEvents(){
 			alert("You WIN!!!");
 		}
 	}
+
+	//<!-- EXERCISE 4 -->
+
+	var ex4= document.getElementById("start");
+	ex4.onclick = function(){
+			
+			for(let c=0; c < ex2.length; c++){
+				var nresult= ex2[c];
+				
+					nresult.classList.remove('youlose');
+					red= false;
+				
+			}
+		
+	};
+}
+
 	
 	
 	
 
-}
+
 
 
 window.onload = function() {
